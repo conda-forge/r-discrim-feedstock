@@ -1,6 +1,5 @@
 {% set version = '1.0.1' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-discrim
@@ -13,8 +12,7 @@ source:
   sha256: a03e862206efc5b99e737a5d6227d842d97f388174ec6b2168b8ad807d100025
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
