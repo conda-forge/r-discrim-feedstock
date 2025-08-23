@@ -1,4 +1,4 @@
-{% set version = '1.0.1' %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/discrim_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/discrim/discrim_{{ version }}.tar.gz
-  sha256: a03e862206efc5b99e737a5d6227d842d97f388174ec6b2168b8ad807d100025
+  sha256: 9952551d50236180a0d8c2bbd78b476ff2209400ab40fc9236e3fc719017b2f6
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -46,11 +46,8 @@ about:
   home: https://discrim.tidymodels.org/
   dev_url: https://github.com/tidymodels/discrim
   license: MIT
-  summary: Bindings for additional classification models for use with the 'parsnip' package.
-    Models include flavors of discriminant analysis, such as linear (Fisher (1936) <doi:10.1111/j.1469-1809.1936.tb02137.x>),
-    regularized (Friedman (1989) <doi:10.1080/01621459.1989.10478752>), and flexible
-    (Hastie, Tibshirani, and Buja (1994) <doi:10.1080/01621459.1994.10476866>), as well
-    as naive Bayes classifiers (Hand and Yu (2007) <doi:10.1111/j.1751-5823.2001.tb00465.x>).
+  summary: Bindings for additional classification models for use with the 'parsnip' package. Models include flavors of discriminant analysis, such as linear (Fisher (1936) <doi:10.1111/j.1469-1809.1936.tb02137.x>), regularized (Friedman (1989) <doi:10.1080/01621459.1989.10478752>), and flexible (Hastie, Tibshirani, and Buja
+    (1994) <doi:10.1080/01621459.1994.10476866>), as well as naive Bayes classifiers (Hand and Yu (2007) <doi:10.1111/j.1751-5823.2001.tb00465.x>).
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
